@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.services.vm.VMServiceManager" created="2023-09-28T20:18:47.474+02:00" lastModified="2023-09-28T20:22:19.020+02:00" leaf="true" version="4">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.web.robots.specs.listEntries</references>
+    <references>be.nabu.libs.types.api.KeyValuePair</references>
+    <references>nabu.utils.reflection.Service.listImplementations</references>
+    <references>java.lang.String</references>
+    <references>nabu.utils.types.NodeDescription</references>
+    <references>nabu.utils.List.addAll</references>
+</node>

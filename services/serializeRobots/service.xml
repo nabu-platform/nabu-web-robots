@@ -1,0 +1,140 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="6c0e75d176d84e13ae814be98e390e7a"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="1c53a33ab9114496a7150e7abb33a886"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="e064647c79ce404ca310494985cdf305"
+				serviceId="nabu.web.robots.services.buildRobots"
+				resultName="resultc68df01d95d643e8bd5ed8a87572cd07"
+				temporaryMapping="true"
+				x="30"
+				y="30"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="16578486c77644a28cff2bdd399c7bd6"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>input/webApplicationId</from>
+				<to>webApplicationId</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="d071009888894f438d6888dc214c772a"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultc68df01d95d643e8bd5ed8a87572cd07/entries</from>
+			<to>entries</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="7ed12e6cfc1a452c867f92607b983a53"
+			lineNumber="3"
+			variable="entry">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="559fdf272c534305977143c8461995c8"
+				lineNumber="4">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="afffd3a2149b42cda26ca30f5b5102d6"
+					serviceId="nabu.utils.String.join"
+					resultName="result580fa74a8d64435ea9424d3c0b00da32"
+					temporaryMapping="true"
+					x="107"
+					y="201"
+					invocationOrder="0"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="38b94ac62009454b98803f688b70c7b2"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>entry/key</from>
+					<to>parts[0]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="1dc5161961d446b29432aea264f41717"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>entry/value</from>
+					<to>parts[1]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="646614607d6b453fa6166060aed126d1"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>: </from>
+					<to>separator</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="0089d61f1a2a4ae699a2b09124085df5"
+					serviceId="nabu.utils.String.join"
+					resultName="result18755bcb8eea4a9a9a00fb757918c945"
+					temporaryMapping="true"
+					x="611"
+					y="186"
+					invocationOrder="1"
+					asynchronous="false"
+					recache="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="4c5bd87bb915417d9a6272f103ac5785"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>output/serialized</from>
+					<to>parts[0]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="5c4961faf29f4d9f8cb130ebbb345ecb"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>result580fa74a8d64435ea9424d3c0b00da32/string</from>
+					<to>parts[1]</to>
+				</steps>
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="2a479342eb9f42eea42dc63b2216648e"
+						mask="false"
+						optional="false"
+						fixedValue="true">
+					<from>="
+"</from>
+					<to>separator</to>
+				</steps>
+			</steps>
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="314db87051c640c28ef9a361e5a8a4fc"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>result18755bcb8eea4a9a9a00fb757918c945/string</from>
+				<to>output/serialized</to>
+			</steps>
+		</steps>
+		<query>entries</query>
+	</steps>
+</sequence>

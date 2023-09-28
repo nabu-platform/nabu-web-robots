@@ -1,0 +1,9 @@
+<structure name="pipeline">
+    <structure name="input">
+        <field name="webApplicationId" type="java.lang.String"/>
+    </structure>
+    <structure name="output">
+        <structure definition="be.nabu.libs.types.api.KeyValuePair" maxOccurs="unbounded" minOccurs="0" name="entries"/>
+    </structure>
+    <structure definition="nabu.utils.types.NodeDescription" maxOccurs="unbounded" minOccurs="0" name="implementations"/>
+</structure>

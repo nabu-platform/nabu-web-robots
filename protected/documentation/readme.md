@@ -1,0 +1,1 @@
+Make sure to add this to the root of your application, NOT a component with a path.

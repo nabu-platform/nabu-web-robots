@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cache>
+    <cacheProvider>nabu.web.robots.utils.memoryCache</cacheProvider>
+    <service>nabu.web.robots.services.serializeRobots</service>
+    <enableInDevelopment>true</enableInDevelopment>
+</cache>

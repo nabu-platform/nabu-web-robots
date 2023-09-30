@@ -2,5 +2,5 @@
 <cache>
     <cacheProvider>nabu.web.robots.utils.memoryCache</cacheProvider>
     <service>nabu.web.robots.services.serializeRobots</service>
-    <enableInDevelopment>true</enableInDevelopment>
+    <enableInDevelopment>false</enableInDevelopment>
 </cache>

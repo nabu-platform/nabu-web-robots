@@ -11,8 +11,28 @@
 	</parent>
 	<dependencies>
 		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>iface</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.web.rest</groupId>
+			<artifactId>provider</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu</groupId>
+			<artifactId>utils</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>nabu.web</groupId>
-			<artifactId>application</artifactId>
+			<artifactId>component</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.misc</groupId>
+			<artifactId>cache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>nabu.services</groupId>
+			<artifactId>vm</artifactId>
 		</dependency>
 	</dependencies>
 </project>
